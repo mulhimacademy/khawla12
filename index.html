@@ -3,46 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>نظام إدارة جداول الامتحانات | مدرسة خولة بنت حكيم للبنات</title>
+  <title>نظام إدارة جداول امتحانات الدبلوم العام | مدرسة خولة بنت حكيم للتعليم الأساسي</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/x-icon" href="https://d.top4top.io/p_36520q11g1.png">
 
   <style>
     :root {
-      --primary-color: #d63384; /* وردي غامق أنثوي */
-      --secondary-color: #9c27b0; /* بنفسجي ملكي */
-      --accent-color: #e91e63; /* وردي زاهي */
-      --light-pink: #f48fb1; /* وردي فاتح */
-      --lavender: #ce93d8; /* خزامي */
-      --peach: #ffb6c1; /* در Peach */
-      --mint: #80cbc4; /* نعناعي */
-      --gold: #ffd54f; /* ذهبي لامع */
-      --silver: #e0e0e0; /* فضي */
-      --deep-purple: #7b1fa2; /* بنفسجي عميق */
+      --primary-green: #1a7f5c; /* أخضر وزارة التربية والتعليم */
+      --secondary-green: #2d9b8c; /* أخضر فاتح */
+      --accent-blue: #2c5aa0; /* أزرق ملكي */
+      --dark-blue: #1c3d5a; /* أزرق بحري عميق */
+      --gold-color: #e6b422; /* ذهبي دافئ */
+      --light-green: #e8f5e9; /* أخضر فاتح للخلفية */
+      --medium-green: #4caf50; /* أخضر متوسط */
+      --text-color: #2d3748;
+      --text-light: #4a5568;
       --white: #ffffff;
-      --off-white: #fff9fb;
-      --light-gray: #f8f9fa;
-      --text-color: #4a148c;
-      --text-light: #7b1fa2;
-      --shadow: 0 8px 32px rgba(214, 51, 132, 0.1);
-      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      --border-radius: 20px;
-      --border-radius-lg: 30px;
-      --gradient-primary: linear-gradient(135deg, #d63384 0%, #9c27b0 100%);
-      --gradient-secondary: linear-gradient(135deg, #9c27b0 0%, #d63384 100%);
-      --gradient-accent: linear-gradient(135deg, #e91e63 0%, #ff4081 100%);
-      --gradient-gold: linear-gradient(135deg, #ffd54f 0%, #ffb300 100%);
-      --gradient-lavender: linear-gradient(135deg, #ce93d8 0%, #ba68c8 100%);
-      --gradient-mint: linear-gradient(135deg, #80cbc4 0%, #4db6ac 100%);
-      --gradient-header: linear-gradient(135deg, rgba(214, 51, 132, 0.95) 0%, rgba(156, 39, 176, 0.95) 100%);
-      --gradient-light: linear-gradient(135deg, #fff9fb 0%, #fce4ec 100%);
-      --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 249, 251, 0.95) 100%);
-      --glass-bg: rgba(255, 255, 255, 0.25);
-      --glass-border: rgba(255, 255, 255, 0.35);
-      --flower-bg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="rgba(255,255,255,0.1)" d="M50,10 Q60,20 70,10 Q80,20 90,30 Q80,40 90,50 Q80,60 70,70 Q60,80 50,90 Q40,80 30,70 Q20,60 10,50 Q20,40 10,30 Q20,20 30,10 Q40,20 50,10 Z"/></svg>');
+      --off-white: #f9fafb;
+      --shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --border-radius: 18px;
+      --border-radius-lg: 26px;
+      --gradient-primary: linear-gradient(135deg, #1a7f5c 0%, #2d9b8c 100%);
+      --gradient-secondary: linear-gradient(135deg, #2c5aa0 0%, #1c3d5a 100%);
+      --gradient-accent: linear-gradient(135deg, #e6b422 0%, #d4a017 100%);
+      --gradient-green: linear-gradient(135deg, #1a7f5c 0%, #2d9b8c 100%);
+      --gradient-blue: linear-gradient(135deg, #2c5aa0 0%, #1c3d5a 100%);
+      --gradient-header: linear-gradient(135deg, rgba(26, 127, 92, 0.95) 0%, rgba(45, 155, 140, 0.95) 100%);
+      --gradient-light: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+      --glass-bg: rgba(255, 255, 255, 0.18);
+      --glass-border: rgba(255, 255, 255, 0.28);
     }
 
     * { 
@@ -59,63 +51,51 @@
     
     body {
       font-family: 'Tajawal', 'Noto Naskh Arabic', sans-serif;
-      background: var(--gradient-light);
+      background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
       color: var(--text-color);
-      line-height: 1.8;
+      line-height: 1.7;
       overflow-x: hidden;
       min-height: 100vh;
       width: 100%;
       max-width: 100%;
-      position: relative;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: var(--flower-bg);
-      background-size: 300px;
-      opacity: 0.1;
-      z-index: -1;
-      pointer-events: none;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(76, 175, 80, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(26, 127, 92, 0.05) 0%, transparent 50%);
     }
 
     .container { 
       max-width: 1400px; 
       margin: 0 auto; 
-      padding: 0 25px; 
+      padding: 0 20px; 
       width: 100%; 
     }
 
-    /* شعار المدرسة الأنثوي */
+    /* شعار المدرسة في الهيدر */
     .school-logo-header {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       position: relative;
       animation: float 6s ease-in-out infinite;
-      z-index: 10;
     }
     
     .logo-container {
       display: flex;
       align-items: center;
       gap: 25px;
-      background: var(--glass-bg);
+      background: rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);
-      padding: 25px 40px;
+      padding: 20px 35px;
       border-radius: var(--border-radius-lg);
-      border: 2px solid var(--glass-border);
-      box-shadow: 0 20px 50px rgba(214, 51, 132, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
       position: relative;
       overflow: hidden;
       transition: var(--transition);
-      z-index: 2;
+      max-width: 900px;
+      width: 100%;
     }
     
     .logo-container::before {
@@ -125,35 +105,13 @@
       left: 0;
       right: 0;
       height: 5px;
-      background: linear-gradient(90deg, var(--gold), var(--accent-color), var(--lavender), var(--mint));
+      background: linear-gradient(90deg, var(--gold-color), var(--accent-blue), var(--primary-green));
       z-index: 1;
-      animation: rainbow 3s linear infinite;
-    }
-    
-    @keyframes rainbow {
-      0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
-    }
-    
-    .logo-container::after {
-      content: "🌸";
-      position: absolute;
-      top: -20px;
-      right: -20px;
-      font-size: 3rem;
-      color: rgba(255, 255, 255, 0.3);
-      z-index: 1;
-      animation: rotate 20s linear infinite;
-    }
-    
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
     }
     
     .logo-container:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 30px 60px rgba(214, 51, 132, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
     }
     
     .logo-img {
@@ -161,74 +119,58 @@
       height: 110px;
       border-radius: 50%;
       border: 4px solid var(--white);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
       object-fit: cover;
       transition: var(--transition);
-      position: relative;
-      z-index: 2;
-      background: var(--white);
+      background: white;
     }
     
     .logo-img:hover {
-      transform: scale(1.1) rotate(10deg);
-      border-color: var(--gold);
+      transform: scale(1.08) rotate(5deg);
     }
     
     .logo-text {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      position: relative;
-      z-index: 2;
+      gap: 12px;
+      flex: 1;
     }
     
-    .logo-title {
-      font-size: 2.5rem;
+    .logo-main-title {
+      font-size: 1.8rem;
       font-weight: 900;
       color: var(--white);
-      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      line-height: 1.2;
-      background: linear-gradient(135deg, #fff 0%, #ffebee 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+      line-height: 1.3;
+      margin-bottom: 5px;
     }
     
     .logo-subtitle {
       font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--gold);
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      position: relative;
-      display: inline-block;
+      font-weight: 800;
+      color: var(--gold-color);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+      line-height: 1.3;
     }
     
-    .logo-subtitle::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      right: 0;
-      width: 100%;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      border-radius: 2px;
+    .logo-details {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.4;
+      margin-top: 8px;
     }
 
-    /* تصميم الهيدر الأنثوي */
     header {
       background: var(--gradient-header), url('https://d.top4top.io/p_36520q11g1.png') center/cover no-repeat;
       color: var(--white);
-      padding: 50px 0 40px;
+      padding: 45px 0 35px;
       text-align: center;
       border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
-      margin-bottom: 50px;
+      margin-bottom: 45px;
       position: relative;
-      box-shadow: 0 20px 50px rgba(214, 51, 132, 0.25);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
       overflow: hidden;
-      min-height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
     
     header::before {
@@ -238,150 +180,97 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.08)"/><path d="M0,100 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.08)"/></svg>');
       background-size: cover;
       pointer-events: none;
     }
     
-    .floating-flowers {
+    header::after {
+      content: "";
       position: absolute;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
-    
-    .flower {
-      position: absolute;
-      font-size: 1.5rem;
-      color: rgba(255, 255, 255, 0.4);
-      animation: float-flower 15s linear infinite;
-    }
-    
-    @keyframes float-flower {
-      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: linear-gradient(90deg, var(--gold-color), var(--accent-blue));
     }
 
     .header-content { 
       padding: 0 20px; 
       position: relative;
-      z-index: 10;
-      width: 100%;
-      max-width: 1200px;
+      z-index: 2;
     }
     
     h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-size: clamp(1.9rem, 5vw, 3rem);
       font-weight: 900;
       line-height: 1.3;
       margin-bottom: 20px;
-      background: linear-gradient(135deg, #fff 0%, #ffebee 100%);
+      background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      position: relative;
-      display: inline-block;
-    }
-    
-    h1::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      right: 0;
-      width: 200px;
-      height: 4px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      border-radius: 2px;
-      left: 50%;
-      transform: translateX(-50%);
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+      padding: 0 10px;
     }
 
     .header-subtitle {
       font-size: clamp(1.3rem, 3.5vw, 2rem);
-      color: var(--gold);
+      color: var(--gold-color);
       font-weight: 800;
       text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      margin: 20px 0 30px;
+      margin: 20px 0 25px;
       position: relative;
       display: inline-block;
-      padding: 0 20px;
-    }
-    
-    .header-subtitle::before, .header-subtitle::after {
-      content: "✨";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.5rem;
-    }
-    
-    .header-subtitle::before {
-      right: -10px;
+      padding-bottom: 12px;
     }
     
     .header-subtitle::after {
-      left: -10px;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 70%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--gold-color));
+      border-radius: 2px;
     }
 
     .header-meta {
       display: inline-block;
-      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      font-size: clamp(1.1rem, 2.4vw, 1.3rem);
       font-weight: 700;
-      padding: 18px 35px;
-      border-radius: 50px;
+      padding: 16px 32px;
+      border-radius: 999px;
       background: var(--glass-bg);
-      border: 2px solid var(--glass-border);
+      border: 1px solid var(--glass-border);
       backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       max-width: 95%;
       margin: 25px auto;
       transition: var(--transition);
-      color: var(--white);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .header-meta::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: 0.6s;
-    }
-    
-    .header-meta:hover::before {
-      left: 100%;
     }
     
     .header-meta:hover {
       background: rgba(255, 255, 255, 0.3);
       transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     }
 
-    /* معلومات المدرسة مع لمسات أنثوية */
     .school-info {
       display: flex;
       justify-content: center;
       gap: 30px;
       flex-wrap: wrap;
-      margin: 30px auto 0;
+      margin: 25px auto 0;
       max-width: 1000px;
       padding: 25px;
       border-radius: var(--border-radius);
       background: var(--glass-bg);
-      border: 2px solid var(--glass-border);
+      border: 1px solid var(--glass-border);
       backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
     
     .info-item {
@@ -389,37 +278,23 @@
       align-items: center;
       gap: 15px;
       font-weight: 700;
-      font-size: 1.2rem;
-      padding: 15px 25px;
+      font-size: 1.15rem;
+      padding: 12px 22px;
       background: rgba(255, 255, 255, 0.15);
-      border-radius: 15px;
+      border-radius: 14px;
       transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .info-item::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 5px;
-      height: 100%;
-      background: var(--gold);
     }
     
     .info-item:hover {
       background: rgba(255, 255, 255, 0.25);
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
     }
     
     .info-item i { 
-      color: var(--gold); 
-      font-size: 1.5rem; 
+      color: var(--gold-color); 
+      font-size: 1.4rem; 
     }
 
-    /* الوقت والتاريخ بأناقة */
     .header-time-date {
       display: flex;
       justify-content: center;
@@ -430,10 +305,10 @@
       padding: 25px 30px;
       border-radius: var(--border-radius);
       background: var(--glass-bg);
-      border: 2px solid var(--glass-border);
+      border: 1px solid var(--glass-border);
       backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
     
     .header-time, .header-date { 
@@ -442,36 +317,22 @@
       gap: 15px; 
       font-weight: 800; 
       font-size: 1.3rem;
-      padding: 15px 25px;
+      padding: 12px 25px;
       background: rgba(255, 255, 255, 0.15);
-      border-radius: 15px;
+      border-radius: 14px;
       transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .header-time::before, .header-date::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 5px;
-      height: 100%;
-      background: var(--lavender);
     }
     
     .header-time:hover, .header-date:hover {
       background: rgba(255, 255, 255, 0.25);
       transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
     
     .header-time i, .header-date i { 
-      color: var(--lavender); 
-      font-size: 1.8rem; 
+      color: var(--gold-color); 
+      font-size: 1.6rem; 
     }
 
-    /* أزرار التنقل الأنثوية */
     .main-nav {
       display: flex;
       justify-content: center;
@@ -483,9 +344,9 @@
     
     .nav-btn {
       color: var(--white);
-      border: 2px solid rgba(255,255,255,0.4);
+      border: 1px solid rgba(255,255,255,0.35);
       padding: 20px 30px;
-      border-radius: 20px;
+      border-radius: 18px;
       font-size: 1.2rem;
       font-weight: 800;
       cursor: pointer;
@@ -494,14 +355,14 @@
       justify-content: center;
       gap: 15px;
       transition: var(--transition);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       min-height: 70px;
       width: min(400px, 100%);
       position: relative;
       overflow: hidden;
-      z-index: 1;
+      letter-spacing: 0.5px;
     }
     
     .nav-btn::before {
@@ -511,9 +372,8 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
       transition: 0.6s;
-      z-index: -1;
     }
     
     .nav-btn:hover::before {
@@ -521,41 +381,34 @@
     }
     
     .nav-btn:hover { 
-      transform: translateY(-8px) scale(1.05); 
-      box-shadow: 0 25px 50px rgba(0,0,0,0.3); 
+      transform: translateY(-8px); 
+      box-shadow: 0 22px 45px rgba(0,0,0,0.3); 
     }
     
-    .nav-btn i {
-      font-size: 1.5rem;
-      transition: var(--transition);
-    }
-    
-    .nav-btn:hover i {
-      transform: scale(1.3) rotate(10deg);
-    }
-    
+    /* زر تعليمات الاختبار - أزرق */
     .instructions-btn { 
-      background: var(--gradient-lavender); 
+      background: var(--gradient-blue); 
+      border: 2px solid rgba(255, 255, 255, 0.4);
     }
     
+    /* زر بيانات اليوم - أخضر */
     .dropdown-btn { 
-      background: var(--gradient-mint); 
+      background: var(--gradient-green); 
+      border: 2px solid rgba(255, 255, 255, 0.4);
     }
 
-    /* حاوية جدول الامتحانات الأنثوية */
     .exam-table-container {
-      background: var(--gradient-card);
+      background: var(--white);
       border-radius: var(--border-radius-lg);
-      box-shadow: 0 20px 50px rgba(214, 51, 132, 0.15);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
       padding: 30px;
-      border: 2px solid rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0,0,0,0.1);
       width: 100%;
       max-width: 100%;
       margin-bottom: 70px;
       position: relative;
       overflow: hidden;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: linear-gradient(135deg, #ffffff 0%, #f8fdf8 100%);
     }
     
     .exam-table-container::before {
@@ -565,35 +418,20 @@
       right: 0;
       width: 10px;
       height: 100%;
-      background: var(--gradient-primary);
-      box-shadow: -5px 0 20px rgba(214, 51, 132, 0.3);
-    }
-    
-    .exam-table-container::after {
-      content: "📚";
-      position: absolute;
-      bottom: -30px;
-      left: -30px;
-      font-size: 10rem;
-      color: rgba(214, 51, 132, 0.05);
-      z-index: 0;
-      transform: rotate(-20deg);
+      background: var(--gradient-green);
     }
 
-    /* تصميم الجدول الأنثوي */
     .exam-table { 
       width: 100%; 
       border-collapse: separate; 
       border-spacing: 0; 
-      min-width: 800px; 
-      position: relative;
-      z-index: 1;
+      min-width: 850px; 
     }
     
     .exam-table th {
-      background: var(--gradient-primary);
+      background: var(--gradient-green);
       color: var(--white);
-      padding: 25px 20px;
+      padding: 22px 18px;
       text-align: center;
       font-weight: 900;
       position: sticky;
@@ -601,185 +439,109 @@
       z-index: 10;
       white-space: nowrap;
       font-size: 1.2rem;
-      letter-spacing: 1px;
-      border-bottom: 4px solid var(--gold);
-      text-transform: uppercase;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      letter-spacing: 0.5px;
+      border-bottom: 4px solid var(--gold-color);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     }
     
     .exam-table td { 
-      padding: 22px 20px; 
+      padding: 20px 18px; 
       text-align: center; 
-      border-bottom: 2px solid rgba(214, 51, 132, 0.1); 
+      border-bottom: 1px solid rgba(0,0,0,0.1); 
       font-size: 1.1rem;
       transition: var(--transition);
-      position: relative;
-    }
-    
-    .exam-table tr {
-      transition: var(--transition);
-    }
-    
-    .exam-table tr:hover {
-      transform: translateX(-10px);
-      background: linear-gradient(90deg, rgba(214, 51, 132, 0.05), transparent);
     }
     
     .exam-table tr:hover td {
-      background: transparent;
+      background: rgba(26, 127, 92, 0.08);
     }
 
-    /* تصميم العداد التنازلي الأنثوي */
     .countdown {
       font-weight: 900;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 15px;
-      font-size: 1.2rem;
-      padding: 18px 25px;
-      border-radius: 20px;
+      font-size: 1.15rem;
+      padding: 16px 24px;
+      border-radius: 999px;
       min-width: 280px;
-      border: 2px solid rgba(255, 255, 255, 0.8);
+      border: 3px solid rgba(0,0,0,0.1);
       transition: var(--transition);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .countdown::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.1);
-      z-index: -1;
     }
     
     .countdown:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
     }
     
     .countdown.upcoming { 
-      background: linear-gradient(135deg, rgba(156, 39, 176, 0.2) 0%, rgba(206, 147, 216, 0.2) 100%); 
-      color: var(--secondary-color); 
-      border-color: rgba(156, 39, 176, 0.3); 
+      background: rgba(45, 155, 140, 0.18); 
+      color: var(--secondary-green); 
+      border-color: rgba(45, 155, 140, 0.35); 
     }
     
     .countdown.active { 
-      background: linear-gradient(135deg, rgba(233, 30, 99, 0.2) 0%, rgba(244, 143, 177, 0.2) 100%); 
-      color: var(--accent-color); 
-      border-color: rgba(233, 30, 99, 0.3); 
+      background: rgba(230, 180, 34, 0.18); 
+      color: #b8941f; 
+      border-color: rgba(230, 180, 34, 0.35); 
       animation: pulse 2s infinite; 
     }
     
     .countdown.finished { 
-      background: linear-gradient(135deg, rgba(128, 128, 128, 0.15) 0%, rgba(192, 192, 192, 0.15) 100%); 
-      color: #9e9e9e; 
-      border-color: rgba(158, 158, 158, 0.3); 
+      background: rgba(100,116,139,0.15); 
+      color: #64748b; 
+      border-color: rgba(100,116,139,0.2); 
     }
 
     .status-dot {
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
       display: inline-block;
-      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 0 5px rgba(0,0,0,0.06);
       transition: var(--transition);
-      position: relative;
     }
     
-    .status-dot::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: white;
-      opacity: 0.8;
-    }
-    
-    .dot-upcoming { 
-      background: var(--secondary-color); 
-      box-shadow: 0 0 20px rgba(156, 39, 176, 0.5); 
-    }
-    
-    .dot-active { 
-      background: var(--accent-color); 
-      box-shadow: 0 0 20px rgba(233, 30, 99, 0.5); 
-      animation: pulse-dot 2s infinite; 
-    }
-    
-    .dot-finished { 
-      background: #bdbdbd; 
-      box-shadow: 0 0 20px rgba(158, 158, 158, 0.5); 
-    }
-    
-    @keyframes pulse-dot {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-    }
+    .dot-upcoming { background: var(--secondary-green); }
+    .dot-active { background: #d4a017; }
+    .dot-finished { background: #94a3b8; }
 
-    /* أيام العطل والإجازات */
     .holiday { 
-      background: linear-gradient(135deg, rgba(255, 182, 193, 0.2) 0%, rgba(255, 209, 79, 0.2) 100%); 
-      color: var(--accent-color); 
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .holiday::before {
-      content: "🌸";
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.5rem;
-      opacity: 0.3;
+      background: rgba(230, 180, 34, 0.1); 
+      color: #b8941f; 
     }
     
     .holiday td { 
       font-weight: 900; 
-      font-size: 1.3rem;
-      padding: 25px 20px;
+      font-size: 1.25rem;
     }
 
     .exam-active-row { 
-      background: linear-gradient(90deg, rgba(233, 30, 99, 0.1), transparent) !important; 
-      border-right: 6px solid var(--accent-color);
-      box-shadow: inset 0 0 30px rgba(233, 30, 99, 0.1);
+      background: rgba(230, 180, 34, 0.1) !important; 
+      border-right: 5px solid #d4a017;
     }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.4); }
-      70% { box-shadow: 0 0 0 15px rgba(233, 30, 99, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(233, 30, 99, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(230, 180, 34, 0.35); }
+      70% { box-shadow: 0 0 0 15px rgba(230, 180, 34, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(230, 180, 34, 0); }
     }
     
     @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-15px) rotate(5deg); }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
     }
 
-    /* تصميم الفوتر الأنثوي */
     footer {
       text-align: center;
-      padding: 50px 25px;
-      background: var(--gradient-header);
+      padding: 45px 25px;
+      background: var(--gradient-header), url('https://d.top4top.io/p_36520q11g1.png') center/cover no-repeat;
       color: var(--white);
       border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
-      box-shadow: 0 -15px 50px rgba(214, 51, 132, 0.2);
+      box-shadow: 0 -15px 45px rgba(0,0,0,0.18);
       position: relative;
       overflow: hidden;
-      margin-top: 50px;
     }
     
     footer::before {
@@ -788,19 +550,9 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, var(--gold), var(--lavender), var(--mint), var(--accent-color));
-      animation: rainbow 3s linear infinite;
-    }
-    
-    footer::after {
-      content: "💐";
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      font-size: 3rem;
-      opacity: 0.2;
-      transform: rotate(-20deg);
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.12);
+      z-index: 1;
     }
     
     footer > * {
@@ -809,18 +561,17 @@
     }
     
     footer strong { 
-      color: var(--gold); 
-      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      color: var(--gold-color); 
     }
     
     footer p {
-      margin-bottom: 20px;
-      font-size: 1.2rem;
-      line-height: 1.8;
+      margin-bottom: 18px;
+      font-size: 1.15rem;
+      line-height: 1.6;
     }
 
     .whatsapp-link {
-      margin-top: 30px;
+      margin-top: 25px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -828,93 +579,29 @@
       color: var(--white);
       text-decoration: none;
       font-weight: 900;
-      padding: 20px 35px;
-      border-radius: 50px;
-      border: 2px solid rgba(255,255,255,0.4);
-      background: rgba(255, 255, 255, 0.2);
+      padding: 18px 32px;
+      border-radius: 999px;
+      border: 2px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.25);
       width: min(450px, 100%);
       backdrop-filter: blur(15px);
       -webkit-backdrop-filter: blur(15px);
       transition: var(--transition);
-      font-size: 1.2rem;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .whatsapp-link::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: 0.6s;
-    }
-    
-    .whatsapp-link:hover::before {
-      left: 100%;
+      font-size: 1.15rem;
     }
     
     .whatsapp-link:hover {
-      background: rgba(255, 255, 255, 0.3);
-      transform: translateY(-8px) scale(1.05);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      background: rgba(255, 255, 255, 0.35);
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
     }
     
     .whatsapp-icon { 
       color: #25D366; 
       font-size: 2rem; 
-      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
     }
 
-    /* زر فتح شاشة اليوم */
-    .open-daily {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      width: 100%;
-      margin-top: 15px;
-      padding: 18px 25px;
-      border-radius: 18px;
-      background: var(--gradient-gold);
-      border: none;
-      color: var(--text-color);
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 15px 35px rgba(255, 213, 79, 0.3);
-      font-size: 1.1rem;
-      transition: var(--transition);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .open-daily::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-      transition: 0.6s;
-    }
-    
-    .open-daily:hover::before {
-      left: 100%;
-    }
-    
-    .open-daily:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 20px 40px rgba(255, 213, 79, 0.4);
-    }
-    
-    .open-daily:active { 
-      transform: scale(0.98); 
-    }
-
-    /* تصميم للهواتف */
+    /* ✅ الهاتف: بطاقات إبداعية وواضحة */
     @media (max-width: 768px) {
       .school-logo-header {
         margin-bottom: 20px;
@@ -923,25 +610,29 @@
       .logo-container {
         flex-direction: column;
         gap: 20px;
-        padding: 20px;
+        padding: 25px 20px;
         text-align: center;
       }
       
-      .logo-title {
-        font-size: 2rem;
+      .logo-main-title {
+        font-size: 1.5rem;
       }
       
       .logo-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
       
-      header {
-        padding: 30px 0;
-        min-height: auto;
+      .logo-details {
+        font-size: 1.1rem;
+      }
+      
+      .logo-img {
+        width: 100px;
+        height: 100px;
       }
       
       .exam-table-container { 
-        padding: 20px; 
+        padding: 20px 15px; 
         margin-bottom: 50px;
       }
       
@@ -963,43 +654,40 @@
       .exam-table tr {
         display: block;
         position: relative;
-        background: var(--gradient-card);
-        border-radius: 25px;
+        background: #fff;
+        border-radius: 22px;
         overflow: hidden;
         margin: 0 0 25px 0;
-        border: 2px solid rgba(255, 255, 255, 0.8);
-        box-shadow: 0 20px 40px rgba(214, 51, 132, 0.15);
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 18px 40px rgba(0,0,0,0.12);
         transform: translateZ(0);
         transition: var(--transition);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
       }
       
       .exam-table tr:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 30px 50px rgba(214, 51, 132, 0.2);
+        transform: translateY(-6px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.18);
       }
 
-      /* شريط علوي زهري */
+      /* شريط علوي يميز اليوم */
       .exam-table tr::before {
         content: "";
         position: absolute;
         inset: 0 0 auto 0;
         height: 10px;
-        background: var(--gradient-primary);
-        box-shadow: 0 5px 15px rgba(214, 51, 132, 0.3);
+        background: var(--gradient-green);
       }
 
       /* شارة حالة كبيرة */
       .badge {
         position: absolute;
-        top: 20px;
-        left: 20px;
+        top: 18px;
+        left: 18px;
         padding: 10px 20px;
-        border-radius: 50px;
+        border-radius: 999px;
         font-weight: 900;
         font-size: 1.1rem;
-        border: 2px solid rgba(255,255,255,0.4);
+        border: 2px solid rgba(255,255,255,0.35);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         box-shadow: 0 15px 30px rgba(0,0,0,0.2);
@@ -1007,22 +695,22 @@
       }
       
       .badge.upcoming { 
-        background: linear-gradient(135deg, rgba(156, 39, 176, 0.3) 0%, rgba(206, 147, 216, 0.3) 100%); 
-        color: var(--secondary-color); 
+        background: rgba(45, 155, 140, 0.3); 
+        color: var(--secondary-green); 
       }
       
       .badge.active { 
-        background: linear-gradient(135deg, rgba(233, 30, 99, 0.3) 0%, rgba(244, 143, 177, 0.3) 100%); 
-        color: var(--accent-color); 
+        background: rgba(230, 180, 34, 0.3); 
+        color: #b8941f; 
       }
       
       .badge.finished { 
-        background: linear-gradient(135deg, rgba(128, 128, 128, 0.2) 0%, rgba(192, 192, 192, 0.2) 100%); 
-        color: #9e9e9e; 
+        background: rgba(100,116,139,0.25); 
+        color: #64748b; 
       }
 
       .exam-table tr.holiday::before { 
-        background: linear-gradient(135deg, var(--accent-color) 0%, var(--light-pink) 100%); 
+        background: linear-gradient(135deg, #e6b422 0%, #d4a017 100%); 
       }
       
       .exam-table tr.holiday .badge { 
@@ -1030,25 +718,25 @@
       }
 
       .exam-table tr.exam-finished::before { 
-        background: linear-gradient(135deg, #9e9e9e 0%, #bdbdbd 100%); 
+        background: linear-gradient(135deg, #64748b 0%, #94a3b8 100%); 
       }
       
       .exam-table tr.exam-upcoming::before { 
-        background: var(--gradient-lavender); 
+        background: var(--gradient-green); 
       }
       
       .exam-table tr.exam-active::before { 
-        background: var(--gradient-accent); 
+        background: linear-gradient(135deg, #e6b422 0%, #d4a017 100%); 
       }
 
       .exam-table td {
         display: grid;
         grid-template-columns: 130px 1fr;
-        gap: 20px;
+        gap: 18px;
         text-align: right !important;
         width: 100%;
-        padding: 22px 20px;
-        border-bottom: 2px dashed rgba(214, 51, 132, 0.15);
+        padding: 22px 18px;
+        border-bottom: 1px dashed rgba(0,0,0,0.15);
         align-items: center;
       }
       
@@ -1059,25 +747,24 @@
       .exam-table td::before {
         content: attr(data-label);
         font-weight: 900;
-        color: var(--secondary-color);
+        color: var(--dark-blue);
         font-size: 1.1rem;
         opacity: 0.9;
         display: flex;
         align-items: center;
         gap: 10px;
-        padding-right: 10px;
-        border-right: 3px solid var(--lavender);
       }
       
       .exam-table td::before::after {
         content: ":";
-        margin-right: 5px;
+        margin-right: 8px;
       }
 
       .exam-table td > * { 
         text-align: right; 
       }
 
+      /* وضع العداد في سطر كامل */
       .exam-table td[data-label="الحالة"] {
         grid-template-columns: 1fr;
         padding-top: 15px;
@@ -1091,26 +778,55 @@
         width: 100% !important;
         min-width: 0 !important;
         justify-content: flex-start !important;
-        padding: 20px 25px;
-        border-radius: 20px;
+        padding: 20px 24px;
+        border-radius: 18px;
         display: flex;
         gap: 15px;
         margin-bottom: 15px;
       }
+
+      /* زر/لمسة لفتح شاشة اليوم */
+      .open-daily {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+        margin-top: 15px;
+        padding: 20px 24px;
+        border-radius: 18px;
+        background: var(--gradient-green);
+        border: none;
+        color: white;
+        font-weight: 900;
+        cursor: pointer;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+        font-size: 1.1rem;
+        transition: var(--transition);
+      }
+      
+      .open-daily:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      }
+      
+      .open-daily:active { 
+        transform: scale(0.98); 
+      }
       
       .school-info {
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
         padding: 20px;
       }
       
       .info-item {
-        padding: 15px 20px;
+        padding: 15px 18px;
       }
       
       .header-time-date {
         flex-direction: column;
-        gap: 20px;
+        gap: 18px;
         padding: 20px;
       }
       
@@ -1121,90 +837,95 @@
       .nav-btn {
         width: 100%;
         padding: 22px 25px;
+        min-height: 65px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .header-subtitle {
+        font-size: 1.4rem;
       }
     }
 
-    /* تصميم النوافذ المنبثقة */
+    /* Modals */
     .modal {
       display: none;
       position: fixed;
-      z-index: 99999;
+      z-index: 9999;
       inset: 0;
-      background: rgba(156, 39, 176, 0.9);
+      background: rgba(0,0,0,0.9);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      padding: 20px;
-      animation: modalFadeIn 0.5s ease-out;
+      padding: 0;
+      animation: fadeIn 0.4s ease-out;
+      overflow: hidden;
     }
     
-    @keyframes modalFadeIn {
-      from { 
-        opacity: 0; 
-        backdrop-filter: blur(0);
-      }
-      to { 
-        opacity: 1; 
-        backdrop-filter: blur(20px);
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     
     .modal-content {
-      background: var(--gradient-card);
-      width: min(900px, 100%);
+      background: var(--white);
+      width: min(1000px, 100%);
       margin: 0 auto;
-      border-radius: var(--border-radius-lg);
+      border-radius: 0;
       padding: 35px;
-      max-height: 92vh;
-      overflow: hidden;
+      max-height: 100vh;
+      overflow: auto;
       position: relative;
-      box-shadow: 0 40px 80px rgba(156, 39, 176, 0.4);
-      animation: modalSlideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-      border: 2px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+      animation: slideUp 0.5s ease-out;
+      min-height: 100vh;
     }
     
-    @keyframes modalSlideUp {
-      from { transform: translateY(100px) scale(0.9); opacity: 0; }
-      to { transform: translateY(0) scale(1); opacity: 1; }
+    @keyframes slideUp {
+      from { transform: translateY(100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     
     .close {
-      position: absolute;
-      top: 20px;
-      left: 20px;
+      position: sticky;
+      top: 0;
+      float: left;
       width: 55px;
       height: 55px;
-      border-radius: 50%;
-      display: flex;
+      border-radius: 999px;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       font-size: 2.2rem;
       cursor: pointer;
-      background: var(--gradient-accent);
-      color: var(--white);
+      background: rgba(0,0,0,0.1);
+      color: var(--text-color);
       transition: var(--transition);
       z-index: 100;
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+      margin-bottom: 20px;
     }
     
     .close:hover { 
-      background: var(--gradient-primary);
-      transform: rotate(90deg) scale(1.1);
-      box-shadow: 0 15px 40px rgba(214, 51, 132, 0.4);
+      color: var(--accent-blue); 
+      background: rgba(44, 90, 160, 0.15);
+      transform: rotate(90deg);
     }
 
-    /* شاشة اليوم الامتحاني */
+    /* ✅ شاشة بيانات الاختبار اليومية - كاملة الشاشة */
     .daily-fullscreen .modal-content {
       width: 100%;
-      height: 100%;
+      height: 100vh;
       max-height: 100vh;
       border-radius: 0;
       padding: 0;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      background: var(--gradient-light);
+      background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
       animation: none;
+      margin: 0;
+      box-shadow: none;
     }
     
     .daily-header {
@@ -1214,8 +935,8 @@
       text-align: center;
       position: relative;
       overflow: hidden;
-      border-bottom: 5px solid var(--gold);
-      box-shadow: 0 15px 45px rgba(214, 51, 132, 0.3);
+      border-bottom: 5px solid var(--gold-color);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
       min-height: 200px;
       display: flex;
       flex-direction: column;
@@ -1228,63 +949,42 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(214, 51, 132, 0.92) 0%, rgba(156, 39, 176, 0.92) 100%);
+      background: linear-gradient(135deg, rgba(26, 127, 92, 0.95) 0%, rgba(45, 155, 140, 0.95) 100%);
     }
     
     .daily-header-content {
       position: relative;
       z-index: 2;
       width: 100%;
-      max-width: 1000px;
+      max-width: 1200px;
+      padding: 0 20px;
     }
     
     .daily-main-title {
       font-size: clamp(2.5rem, 6vw, 3.5rem) !important;
       font-weight: 900;
       margin-bottom: 15px;
-      text-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
       color: white;
-      line-height: 1.3;
+      line-height: 1.2;
       letter-spacing: -0.5px;
-      max-width: 95%;
+      max-width: 100%;
       margin-left: auto;
       margin-right: auto;
-      background: linear-gradient(135deg, #fff 0%, #ffebee 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
     
     .daily-sub-title {
       font-size: clamp(1.5rem, 3.5vw, 2.2rem);
-      font-weight: 700;
+      font-weight: 800;
       margin-bottom: 20px;
-      color: var(--gold);
+      color: var(--gold-color);
       opacity: 0.95;
-      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-      position: relative;
-      display: inline-block;
-      padding: 0 20px;
-    }
-    
-    .daily-sub-title::before, .daily-sub-title::after {
-      content: "🎀";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.8rem;
-    }
-    
-    .daily-sub-title::before {
-      right: -10px;
-    }
-    
-    .daily-sub-title::after {
-      left: -10px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+      line-height: 1.3;
     }
     
     .daily-year-info {
-      font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
       font-weight: 600;
       background: rgba(255, 255, 255, 0.3);
       display: inline-block;
@@ -1294,12 +994,13 @@
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       margin-top: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
     
     .header-divider {
       width: 180px;
       height: 6px;
-      background: var(--gold);
+      background: var(--gold-color);
       margin: 25px auto;
       border-radius: 3px;
       position: relative;
@@ -1314,12 +1015,12 @@
       width: 60px;
       height: 100%;
       background: white;
-      animation: shine 2s infinite;
+      animation: shine 2.5s infinite;
     }
     
     @keyframes shine {
       0% { transform: translateX(-100%); }
-      100% { transform: translateX(300%); }
+      100% { transform: translateX(350%); }
     }
     
     .daily-body {
@@ -1330,19 +1031,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      position: relative;
-    }
-    
-    .daily-body::before {
-      content: "🌸";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 15rem;
-      color: rgba(214, 51, 132, 0.05);
-      z-index: 0;
-      pointer-events: none;
+      width: 100%;
     }
     
     .exam-status-container {
@@ -1353,51 +1042,35 @@
       margin-bottom: 35px;
       flex-wrap: wrap;
       width: 100%;
-      max-width: 900px;
-      position: relative;
-      z-index: 1;
+      max-width: 1100px;
     }
     
     .exam-day-display {
       font-size: 2.2rem;
       font-weight: 900;
-      color: var(--text-color);
+      color: var(--dark-blue);
       display: flex;
       align-items: center;
       gap: 20px;
       padding: 25px 30px;
-      background: var(--gradient-card);
-      border-radius: 25px;
-      box-shadow: 0 20px 50px rgba(214, 51, 132, 0.15);
-      border: 2px solid rgba(255, 255, 255, 0.8);
+      background: white;
+      border-radius: 22px;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+      border: 3px solid rgba(26, 127, 92, 0.2);
       flex: 1;
-      min-width: 300px;
+      min-width: 320px;
       justify-content: center;
       transition: var(--transition);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .exam-day-display::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 10px;
-      height: 100%;
-      background: var(--gradient-primary);
     }
     
     .exam-day-display:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 30px 60px rgba(214, 51, 132, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.2);
     }
     
     .exam-day-display i {
-      color: var(--primary-color);
-      font-size: 2.2rem;
+      color: var(--primary-green);
+      font-size: 2rem;
     }
     
     .exam-status-badge {
@@ -1405,65 +1078,47 @@
       align-items: center;
       gap: 15px;
       padding: 25px 30px;
-      border-radius: 25px;
+      border-radius: 22px;
       font-weight: 900;
-      font-size: 1.5rem;
-      box-shadow: 0 20px 50px rgba(214, 51, 132, 0.2);
+      font-size: 1.4rem;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
       flex: 1;
-      min-width: 300px;
+      min-width: 320px;
       justify-content: center;
       transition: var(--transition);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .exam-status-badge::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 10px;
-      height: 100%;
-      background: var(--gold);
     }
     
     .exam-status-badge:hover {
-      transform: translateY(-10px) scale(1.05);
+      transform: translateY(-8px);
     }
     
     .exam-status-badge.upcoming {
-      background: var(--gradient-lavender);
+      background: var(--gradient-green);
       color: white;
     }
     
     .exam-status-badge.active {
-      background: var(--gradient-accent);
+      background: linear-gradient(135deg, #e6b422 0%, #d4a017 100%);
       color: white;
       animation: pulse 2s infinite;
     }
     
     .exam-status-badge.finished {
-      background: linear-gradient(135deg, #bdbdbd 0%, #9e9e9e 100%);
+      background: linear-gradient(135deg, #64748b 0%, #94a3b8 100%);
       color: white;
     }
     
     .exam-data-container {
-      background: var(--gradient-card);
-      border-radius: 30px;
-      box-shadow: 0 25px 60px rgba(214, 51, 132, 0.2);
+      background: white;
+      border-radius: 26px;
+      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.15);
       padding: 40px;
-      border: 2px solid rgba(255, 255, 255, 0.8);
+      border: 2px solid rgba(0, 0, 0, 0.12);
       margin: 0 auto;
       width: 100%;
-      max-width: 900px;
+      max-width: 1100px;
       position: relative;
       overflow: hidden;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      z-index: 1;
     }
     
     .exam-data-container::before {
@@ -1471,66 +1126,45 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 15px;
+      width: 12px;
       height: 100%;
-      background: var(--gradient-primary);
-      box-shadow: -5px 0 25px rgba(214, 51, 132, 0.3);
+      background: var(--gradient-green);
     }
     
     .exam-subject {
       font-size: 2.8rem !important;
       font-weight: 900;
-      color: var(--text-color);
+      color: var(--dark-blue);
       text-align: center;
       margin-bottom: 40px;
       padding-bottom: 30px;
-      border-bottom: 5px dashed rgba(214, 51, 132, 0.2);
-      line-height: 1.4;
-      position: relative;
-    }
-    
-    .exam-subject::before, .exam-subject::after {
-      content: "📖";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      opacity: 0.5;
-    }
-    
-    .exam-subject::before {
-      right: -30px;
-    }
-    
-    .exam-subject::after {
-      left: -30px;
+      border-bottom: 5px dashed rgba(26, 127, 92, 0.25);
+      line-height: 1.3;
     }
     
     .exam-details-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 35px;
       margin-bottom: 35px;
     }
     
     .exam-detail-item {
-      background: linear-gradient(135deg, rgba(214, 51, 132, 0.1) 0%, rgba(156, 39, 176, 0.1) 100%);
-      border-radius: 25px;
+      background: linear-gradient(135deg, rgba(26, 127, 92, 0.1) 0%, rgba(45, 155, 140, 0.1) 100%);
+      border-radius: 22px;
       padding: 35px 30px;
-      border: 2px solid rgba(255, 255, 255, 0.8);
+      border: 2px solid rgba(0, 0, 0, 0.1);
       transition: var(--transition);
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
     }
     
     .exam-detail-item:hover {
-      transform: translateY(-10px) scale(1.05);
-      box-shadow: 0 25px 50px rgba(214, 51, 132, 0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
     }
     
     .exam-detail-item::before {
@@ -1540,28 +1174,28 @@
       right: 0;
       width: 10px;
       height: 100%;
-      background: var(--primary-color);
+      background: var(--primary-green);
     }
     
     .detail-label {
       font-size: 1.2rem;
       font-weight: 800;
       color: var(--text-light);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       display: flex;
       align-items: center;
       gap: 15px;
     }
     
     .detail-label i {
-      color: var(--primary-color);
-      font-size: 1.8rem;
+      color: var(--primary-green);
+      font-size: 1.6rem;
     }
     
     .detail-value {
-      font-size: 2.2rem !important;
+      font-size: 2rem !important;
       font-weight: 900;
-      color: var(--text-color);
+      color: var(--dark-blue);
       line-height: 1.3;
       margin-bottom: 25px;
     }
@@ -1574,17 +1208,17 @@
     .countdown-title {
       font-size: 1.8rem;
       font-weight: 900;
-      color: var(--text-color);
+      color: var(--dark-blue);
       margin-bottom: 20px;
       display: flex;
       align-items: center;
-      gap: 20px;
-      padding-bottom: 20px;
-      border-bottom: 4px solid rgba(214, 51, 132, 0.2);
+      gap: 18px;
+      padding-bottom: 18px;
+      border-bottom: 4px solid rgba(26, 127, 92, 0.2);
     }
     
     .countdown-title i {
-      color: var(--accent-color);
+      color: var(--accent-blue);
       font-size: 1.8rem;
     }
     
@@ -1593,14 +1227,14 @@
       font-size: clamp(2.5rem, 5vw, 3.5rem) !important;
       font-weight: 900;
       padding: 35px 30px;
-      border-radius: 25px;
+      border-radius: 22px;
       margin: 25px 0;
-      background: linear-gradient(135deg, rgba(255, 249, 251, 0.9) 0%, rgba(252, 228, 236, 0.9) 100%);
-      border: 4px solid rgba(214, 51, 132, 0.3);
-      color: var(--text-color);
-      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+      border: 5px solid rgba(26, 127, 92, 0.25);
+      color: var(--dark-blue);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
       direction: ltr;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1608,32 +1242,29 @@
       min-height: 160px;
       text-align: center;
       transition: var(--transition);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
     }
     
     .countdown-display:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 30px 60px rgba(214, 51, 132, 0.25);
+      transform: translateY(-8px);
     }
     
     .countdown-display.upcoming {
-      border-color: rgba(156, 39, 176, 0.5);
-      color: var(--secondary-color);
-      background: linear-gradient(135deg, rgba(156, 39, 176, 0.15) 0%, rgba(206, 147, 216, 0.15) 100%);
+      border-color: rgba(45, 155, 140, 0.6);
+      color: var(--secondary-green);
+      background: linear-gradient(135deg, rgba(45, 155, 140, 0.15) 0%, rgba(45, 155, 140, 0.1) 100%);
     }
     
     .countdown-display.active {
-      border-color: rgba(233, 30, 99, 0.5);
-      color: var(--accent-color);
-      background: linear-gradient(135deg, rgba(233, 30, 99, 0.15) 0%, rgba(244, 143, 177, 0.15) 100%);
+      border-color: rgba(230, 180, 34, 0.6);
+      color: #b8941f;
+      background: linear-gradient(135deg, rgba(230, 180, 34, 0.15) 0%, rgba(230, 180, 34, 0.1) 100%);
       animation: pulse-border 1.5s infinite;
     }
     
     .countdown-display.finished {
-      border-color: rgba(158, 158, 158, 0.5);
-      color: #9e9e9e;
-      background: linear-gradient(135deg, rgba(158, 158, 158, 0.15) 0%, rgba(189, 189, 189, 0.15) 100%);
+      border-color: rgba(100, 116, 139, 0.6);
+      color: #64748b;
+      background: linear-gradient(135deg, rgba(100, 116, 139, 0.15) 0%, rgba(100, 116, 139, 0.1) 100%);
     }
     
     .countdown-hint {
@@ -1642,18 +1273,16 @@
       text-align: center;
       margin-top: 20px;
       font-weight: 600;
-      padding: 15px 25px;
-      background: rgba(214, 51, 132, 0.1);
-      border-radius: 20px;
-      border: 2px solid rgba(214, 51, 132, 0.2);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      padding: 15px 22px;
+      background: rgba(26, 127, 92, 0.1);
+      border-radius: 14px;
+      border: 2px solid rgba(26, 127, 92, 0.2);
     }
     
     @keyframes pulse-border {
-      0% { border-color: rgba(233, 30, 99, 0.5); }
-      50% { border-color: rgba(233, 30, 99, 0.9); }
-      100% { border-color: rgba(233, 30, 99, 0.5); }
+      0% { border-color: rgba(230, 180, 34, 0.6); }
+      50% { border-color: rgba(230, 180, 34, 0.9); }
+      100% { border-color: rgba(230, 180, 34, 0.6); }
     }
     
     .close-daily-top {
@@ -1667,86 +1296,63 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: var(--gradient-accent);
+      background: rgba(0, 0, 0, 0.3);
       color: white;
       font-size: 2rem;
       cursor: pointer;
-      border: 3px solid rgba(255, 255, 255, 0.8);
+      border: 3px solid rgba(255, 255, 255, 0.4);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       transition: var(--transition);
-      box-shadow: 0 15px 35px rgba(233, 30, 99, 0.3);
     }
     
     .close-daily-top:hover {
-      background: var(--gradient-primary);
-      transform: rotate(90deg) scale(1.2);
-      box-shadow: 0 20px 45px rgba(214, 51, 132, 0.4);
+      background: rgba(44, 90, 160, 0.9);
+      transform: rotate(90deg) scale(1.1);
     }
     
-    /* تصميم معلومات التعليمات */
     .info-row {
       display: flex;
       align-items: flex-start;
       gap: 25px;
       padding: 25px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 249, 251, 0.95) 100%);
-      border-radius: 25px;
-      border: 2px solid rgba(214, 51, 132, 0.2);
-      margin-bottom: 25px;
+      background: linear-gradient(135deg, rgba(248, 250, 252, 0.95) 0%, rgba(240, 248, 255, 0.95) 100%);
+      border-radius: 20px;
+      border: 2px solid rgba(26, 127, 92, 0.2);
+      margin-bottom: 22px;
       transition: var(--transition);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
     }
     
     .info-row:hover {
-      transform: translateX(10px);
-      box-shadow: 0 20px 40px rgba(214, 51, 132, 0.15);
-      border-color: rgba(214, 51, 132, 0.4);
+      transform: translateX(8px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     }
     
     .info-row i {
-      color: var(--primary-color);
+      color: var(--primary-green);
       font-size: 1.8rem;
-      margin-top: 8px;
+      margin-top: 5px;
       flex-shrink: 0;
-      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
     
     .info-row .label {
       font-weight: 900;
-      color: var(--text-color);
-      margin-bottom: 12px;
+      color: var(--dark-blue);
+      margin-bottom: 10px;
       font-size: 1.2rem;
-      position: relative;
-      display: inline-block;
-    }
-    
-    .info-row .label::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      right: 0;
-      width: 60px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary-color), transparent);
-      border-radius: 2px;
     }
     
     .info-row .value {
-      color: var(--text-light);
+      color: var(--text-color);
       font-weight: 500;
-      line-height: 1.7;
+      line-height: 1.6;
       font-size: 1.1rem;
     }
-
-    /* تصميم للهواتف - شاشة اليوم */
+    
+    /* تحسينات للهواتف */
     @media (max-width: 768px) {
       .daily-header {
-        padding: 25px 20px;
+        padding: 30px 25px;
         min-height: 180px;
       }
       
@@ -1755,12 +1361,11 @@
       }
       
       .daily-sub-title {
-        font-size: 1.5rem;
-        padding: 0 15px;
+        font-size: 1.6rem;
       }
       
       .daily-year-info {
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding: 10px 22px;
       }
       
@@ -1793,7 +1398,7 @@
       .exam-data-container {
         padding: 30px 25px;
         margin-bottom: 25px;
-        border-radius: 25px;
+        border-radius: 22px;
       }
       
       .exam-subject {
@@ -1821,128 +1426,145 @@
       .countdown-display {
         font-size: 2.2rem !important;
         padding: 30px 25px;
-        min-height: 120px;
+        min-height: 130px;
       }
       
       .close-daily-top {
         top: 20px;
         left: 20px;
-        width: 55px;
-        height: 55px;
+        width: 50px;
+        height: 50px;
         font-size: 1.8rem;
       }
       
       .countdown-hint {
-        font-size: 1.1rem;
-        padding: 12px 20px;
+        font-size: 1.2rem;
+        padding: 12px 18px;
       }
       
-      .info-row {
-        padding: 20px;
-        gap: 20px;
-      }
-      
-      .info-row i {
-        font-size: 1.5rem;
-      }
-      
-      .info-row .label {
-        font-size: 1.1rem;
+      .modal-content {
+        padding: 25px 20px;
       }
     }
     
     @media (max-height: 700px) {
       .daily-header {
-        min-height: 160px;
-        padding: 20px 25px;
+        min-height: 170px;
+        padding: 25px 30px;
       }
       
       .daily-main-title {
-        font-size: 1.8rem !important;
+        font-size: 2rem !important;
       }
       
       .daily-sub-title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
       }
       
       .exam-subject {
-        font-size: 1.8rem !important;
+        font-size: 2rem !important;
       }
       
       .detail-value {
-        font-size: 1.5rem !important;
+        font-size: 1.6rem !important;
       }
       
       .countdown-display {
-        font-size: 1.8rem !important;
+        font-size: 2rem !important;
         padding: 25px 20px;
-        min-height: 100px;
+        min-height: 110px;
       }
     }
-
-    /* تصميم نجوم متحركة */
-    .stars {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
+    
+    /* تحسينات للشاشات الكبيرة */
+    @media (min-width: 1200px) {
+      .daily-body {
+        padding: 40px;
+      }
+      
+      .exam-data-container {
+        padding: 50px;
+      }
     }
     
-    .star {
+    /* تأثيرات إضافية */
+    .pulse-animation {
+      animation: pulse 2s infinite;
+    }
+    
+    .shine-effect {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .shine-effect::after {
+      content: "";
       position: absolute;
-      width: 3px;
-      height: 3px;
-      background: var(--gold);
-      border-radius: 50%;
-      animation: twinkle 3s infinite;
+      top: -50%;
+      left: -60%;
+      width: 20%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(30deg);
+      transition: 0.6s;
     }
     
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.3; }
-      50% { opacity: 1; }
+    .shine-effect:hover::after {
+      left: 120%;
+    }
+    
+    /* تخصيص شريط التمرير */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: rgba(26, 127, 92, 0.1);
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-green);
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-green);
     }
   </style>
 </head>
 
 <body>
-  <!-- خلفية النجوم المتحركة -->
-  <div class="stars" id="stars"></div>
-
   <div class="container">
     <header>
-      <!-- الزهور المتحركة في الخلفية -->
-      <div class="floating-flowers" id="floatingFlowers"></div>
-
       <div class="header-content">
-        <!-- شعار المدرسة الأنثوي -->
+        <!-- شعار المدرسة الإبداعي -->
         <div class="school-logo-header">
           <div class="logo-container">
-            <img src="https://d.top4top.io/p_36520q11g1.png" alt="شعار مدرسة خولة بنت حكيم للبنات" class="logo-img">
+            <img src="https://d.top4top.io/p_36520q11g1.png" alt="شعار مدرسة خولة بنت حكيم" class="logo-img">
             <div class="logo-text">
-              <div class="logo-title">مدرسة خولة بنت حكيم</div>
-              <div class="logo-subtitle">للتعليم الأساسي للبنات (9-12)</div>
+              <div class="logo-main-title">سلطنة عُمان - وزارة التربية والتعليم</div>
+              <div class="logo-subtitle">المديرية العامة للتربية والتعليم بمحافظة ظفار</div>
+              <div class="logo-details">مدرسة خولة بنت حكيم للتعليم الأساسي (الصفوف 9-12)</div>
             </div>
           </div>
         </div>
 
-        <h1>🌸 نظام إدارة جداول امتحانات الدبلوم العام 🌸</h1>
-        <div class="header-subtitle">تخريج دفعات متميزة منذ 1995</div>
-        <div class="header-meta">الفصل الدراسي الأول - الدور الأول 2025/2026</div>
+        <h1>نظام إدارة جدول امتحانات الدبلوم العام</h1>
+        <div class="header-subtitle">العام الدراسي 2025/2026 - الفصل الدراسي الأول</div>
+        <div class="header-meta">الدور الأول - امتحانات نهاية الفصل</div>
 
         <div class="school-info">
           <div class="info-item">
-            <i class="fas fa-crown"></i>
-            <span>مديرة المدرسة: الأستاذة ليلى المسهلي</span>
+            <i class="fas fa-user-tie"></i>
+            <span>مديرة المدرسة: أ.ليلى المسهلي</span>
           </div>
           <div class="info-item">
             <i class="fas fa-map-marker-alt"></i>
             <span>محافظة ظفار - سلطنة عُمان</span>
           </div>
           <div class="info-item">
-            <i class="fas fa-phone-alt"></i>
+            <i class="fas fa-phone"></i>
             <span>هاتف المدرسة: 23212367</span>
           </div>
         </div>
@@ -1953,8 +1575,8 @@
         </div>
 
         <div class="main-nav">
-          <button class="nav-btn instructions-btn" id="instructionsBtn"><i class="fas fa-book-open"></i>تعليمات الاختبار</button>
-          <button class="nav-btn dropdown-btn" id="optionsBtn"><i class="fas fa-calendar-star"></i>شاشة اليوم الامتحاني</button>
+          <button class="nav-btn instructions-btn shine-effect" id="instructionsBtn"><i class="fas fa-info-circle"></i>تعليمات الاختبار</button>
+          <button class="nav-btn dropdown-btn shine-effect" id="optionsBtn"><i class="fas fa-calendar-day"></i>بيانات الاختبار اليومية</button>
         </div>
       </div>
     </header>
@@ -1963,40 +1585,40 @@
       <table class="exam-table">
         <thead>
           <tr>
-            <th>📅 اليوم</th>
-            <th>🗓️ التاريخ</th>
-            <th>📚 المادة</th>
-            <th>⏰ وقت الامتحان</th>
-            <th>🔔 الحالة</th>
+            <th>اليوم</th>
+            <th>التاريخ</th>
+            <th>المادة</th>
+            <th>وقت الامتحان</th>
+            <th>الحالة</th>
           </tr>
         </thead>
 
         <tbody>
           <tr id="exam1">
-            <td data-label="📅 اليوم">الأربعاء</td>
-            <td data-label="🗓️ التاريخ">31/12/2025</td>
-            <td data-label="📚 المادة"><strong>اللغة العربية</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الأربعاء</td>
+            <td data-label="التاريخ">31/12/2025</td>
+            <td data-label="المادة"><strong>اللغة العربية</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown1">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(1)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(1)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
 
           <tr id="exam2">
-            <td data-label="📅 اليوم">الخميس</td>
-            <td data-label="🗓️ التاريخ">1/1/2026</td>
-            <td data-label="📚 المادة"><strong>التربية الإسلامية</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الخميس</td>
+            <td data-label="التاريخ">1/1/2026</td>
+            <td data-label="المادة"><strong>التربية الإسلامية</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown2">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(2)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(2)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
 
@@ -2013,72 +1635,72 @@
           </tr>
 
           <tr id="exam3">
-            <td data-label="📅 اليوم">الأحد</td>
-            <td data-label="🗓️ التاريخ">4/1/2026</td>
-            <td data-label="📚 المادة"><strong>الرياضيات الأساسية / الرياضيات المتقدمة</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الأحد</td>
+            <td data-label="التاريخ">4/1/2026</td>
+            <td data-label="المادة"><strong>الرياضيات الأساسية / الرياضيات المتقدمة</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown3">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(3)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(3)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
 
           <tr id="exam4">
-            <td data-label="📅 اليوم">الاثنين</td>
-            <td data-label="🗓️ التاريخ">5/1/2026</td>
-            <td data-label="📚 المادة"><strong>التاريخ (العالم من حولي)</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الاثنين</td>
+            <td data-label="التاريخ">5/1/2026</td>
+            <td data-label="المادة"><strong>التاريخ (العالم من حولي)</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown4">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(4)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(4)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
 
           <tr id="exam5">
-            <td data-label="📅 اليوم">الثلاثاء</td>
-            <td data-label="🗓️ التاريخ">6/1/2026</td>
-            <td data-label="📚 المادة"><strong>الكيمياء</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الثلاثاء</td>
+            <td data-label="التاريخ">6/1/2026</td>
+            <td data-label="المادة"><strong>الكيمياء</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown5">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(5)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(5)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
 
           <tr id="exam6">
-            <td data-label="📅 اليوم">الأربعاء</td>
-            <td data-label="🗓️ التاريخ">7/1/2026</td>
-            <td data-label="📚 المادة"><strong>الجغرافيا والتقنيات الحديثة</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الأربعاء</td>
+            <td data-label="التاريخ">7/1/2026</td>
+            <td data-label="المادة"><strong>الجغرافيا والتقنيات الحديثة</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown6">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(6)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(6)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
 
           <tr id="exam7">
-            <td data-label="📅 اليوم">الخميس</td>
-            <td data-label="🗓️ التاريخ">8/1/2026</td>
-            <td data-label="📚 المادة"><strong>الأحياء</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الخميس</td>
+            <td data-label="التاريخ">8/1/2026</td>
+            <td data-label="المادة"><strong>الأحياء</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown7">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(7)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(7)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
 
@@ -2095,58 +1717,58 @@
           </tr>
 
           <tr id="exam8">
-            <td data-label="📅 اليوم">الأحد</td>
-            <td data-label="🗓️ التاريخ">11/1/2026</td>
-            <td data-label="📚 المادة"><strong>الفيزياء</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الأحد</td>
+            <td data-label="التاريخ">11/1/2026</td>
+            <td data-label="المادة"><strong>الفيزياء</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown8">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(8)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(8)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
 
           <tr id="exam9">
-            <td data-label="📅 اليوم">الإثنين</td>
-            <td data-label="🗓️ التاريخ">12/1/2026</td>
-            <td data-label="📚 المادة"><strong>العلوم والبيئة</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الإثنين</td>
+            <td data-label="التاريخ">12/1/2026</td>
+            <td data-label="المادة"><strong>العلوم والبيئة</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown9">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(9)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(9)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
 
           <tr id="exam10">
-            <td data-label="📅 اليوم">الثلاثاء</td>
-            <td data-label="🗓️ التاريخ">13/1/2026</td>
-            <td data-label="📚 المادة"><strong>اللغة الإنجليزية</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الثلاثاء</td>
+            <td data-label="التاريخ">13/1/2026</td>
+            <td data-label="المادة"><strong>اللغة الإنجليزية</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown10">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(10)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(10)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
 
           <tr id="exam11">
-            <td data-label="📅 اليوم">الأربعاء</td>
-            <td data-label="🗓️ التاريخ">14/1/2026</td>
-            <td data-label="📚 المادة"><strong>الدراسات الاجتماعية (هذا وطني)</strong></td>
-            <td data-label="⏰ وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
-            <td data-label="🔔 الحالة">
+            <td data-label="اليوم">الأربعاء</td>
+            <td data-label="التاريخ">14/1/2026</td>
+            <td data-label="المادة"><strong>الدراسات الاجتماعية (هذا وطني)</strong></td>
+            <td data-label="وقت الامتحان">8:00 صباحًا - 11:00 صباحًا</td>
+            <td data-label="الحالة">
               <div class="countdown upcoming" id="countdown11">
                 <span class="status-dot dot-upcoming"></span>
                 <span class="countdown-text">--</span>
               </div>
-              <button class="open-daily" onclick="openDailyForId(11)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
+              <button class="open-daily shine-effect" onclick="openDailyForId(11)"><i class="fas fa-expand-alt"></i>عرض شاشة اليوم</button>
             </td>
           </tr>
         </tbody>
@@ -2154,13 +1776,14 @@
     </div>
 
     <footer>
-      <p>🎀 مدرسة خولة بنت حكيم للتعليم الأساسي للبنات 🎀</p>
-      <p>مديرة المدرسة: <strong>الأستاذة ليلى المسهلي</strong> | محافظة ظفار - سلطنة عُمان</p>
-      <p>📞 هاتف المدرسة: <strong>23212367</strong> | 📧 البريد الإلكتروني: <strong>info@khawla.edu.om</strong></p>
-      <p>جميع الحقوق محفوظة &copy; 1995-2025</p>
-      <a href="https://wa.me/96823212367" target="_blank" class="whatsapp-link">
+      <p>سلطنة عُمان - وزارة التربية والتعليم</p>
+      <p>المديرية العامة للتربية والتعليم بمحافظة ظفار</p>
+      <p>مدرسة خولة بنت حكيم للتعليم الأساسي - الصفوف (9-12)</p>
+      <p>مديرة المدرسة: <strong>أ. ليلى المسهلي</strong> | محافظة ظفار - سلطنة عُمان</p>
+      <p>هاتف المدرسة: <strong>23212367</strong> | جميع الحقوق محفوظة &copy; 2025</p>
+      <a href="https://wa.me/96823212367" target="_blank" class="whatsapp-link shine-effect">
         <i class="fab fa-whatsapp whatsapp-icon"></i>
-        <span>التواصل مع المدرسة عبر واتساب</span>
+        <span>التواصل مع المدرسة </span>
       </a>
     </footer>
   </div>
@@ -2169,38 +1792,27 @@
   <div id="instructionsModal" class="modal" role="dialog" aria-labelledby="instructionsTitle" aria-modal="true">
     <div class="modal-content">
       <span class="close" aria-label="إغلاق النافذة">&times;</span>
-      <h2 id="instructionsTitle" style="text-align:center;color:var(--text-color);margin-bottom:30px;font-size:2.5rem;position:relative;">
-        <i class="fas fa-graduation-cap" style="color:var(--primary-color);margin-left:15px;"></i>
-        تعليمات الاختبار الرسمية
-        <i class="fas fa-graduation-cap" style="color:var(--primary-color);margin-right:15px;"></i>
-      </h2>
+      <h2 id="instructionsTitle" style="text-align:center;color:var(--dark-blue);margin-bottom:30px;font-size:2.5rem;border-bottom:4px solid var(--accent-blue);padding-bottom:20px;">تعليمات الاختبار الرسمية</h2>
       
-      <div style="background:linear-gradient(135deg, rgba(214, 51, 132, 0.15) 0%, rgba(156, 39, 176, 0.15) 100%);padding:25px;border-radius:25px;margin-bottom:30px;border-right:6px solid var(--primary-color);position:relative;overflow:hidden;">
-        <div style="position:absolute;top:10px;left:10px;font-size:3rem;color:rgba(214, 51, 132, 0.1);">💮</div>
-        <h3 style="color:var(--primary-color);margin-bottom:20px;font-size:1.8rem;">
-          <i class="fas fa-star" style="color:var(--gold);margin-left:10px;"></i>
-          تعليمات هامة لطالباتنا المتميزات
-        </h3>
-        <p style="color:var(--text-color);font-weight:600;font-size:1.2rem;line-height:1.8;">
-          نرجو من جميع الطالبات الاطلاع على التعليمات التالية بعناية والالتزام بها لضمان سير الاختبارات بسلاسة 
-          وتمكين كل طالبة من تحقيق أفضل النتائج في جو من الهدوء والانضباط.
-        </p>
+      <div style="background:linear-gradient(135deg, rgba(44, 90, 160, 0.12) 0%, rgba(26, 127, 92, 0.12) 100%);padding:25px;border-radius:22px;margin-bottom:30px;border-right:5px solid var(--accent-blue);">
+        <h3 style="color:var(--accent-blue);margin-bottom:20px;font-size:1.6rem;"><i class="fas fa-exclamation-circle"></i> تعليمات هامة لجميع الطالبات</h3>
+        <p style="color:var(--text-color);font-weight:600;font-size:1.2rem;line-height:1.6;">يرجى الاطلاع على التعليمات التالية بعناية والالتزام بها لضمان سير الاختبارات بسلاسة ونجاح جميع الطلاب. هذه التعليمات صادرة عن وزارة التربية والتعليم.</p>
       </div>
       
-      <div style="display:grid;gap:25px;max-height:65vh;overflow-y:auto;padding-right:15px;padding-left:5px;">
+      <div style="display:grid;gap:22px;max-height:70vh;overflow-y:auto;padding-right:15px;">
         <div class="info-row">
-          <i class="fas fa-user-graduate"></i>
+          <i class="fas fa-user-tie"></i>
           <div>
-            <div class="label">الزي المدرسي الموحد</div>
-            <div class="value">الالتزام الكامل بالزي المدرسي الموحد للطالبات، مع الحجاب الأبيض المناسب، والمظهر اللائق الذي يعكس انضباط الطالبة وجديتها.</div>
+            <div class="label">الزي الرسمي المدرسي</div>
+            <div class="value">الالتزام الكامل بالزي المدرسي الموحد للطالبات وفق اللوائح المدرسية</div>
           </div>
         </div>
         
         <div class="info-row">
-          <i class="fas fa-pencil-alt"></i>
+          <i class="fas fa-tools"></i>
           <div>
-            <div class="label">الأدوات الدراسية الكاملة</div>
-            <div class="value">إحضار جميع الأدوات اللازمة: الأقلام (أزرق، أسود، رصاص 2B)، المسطرة، الممحاة، الآلة الحاسبة البسيطة المسموح بها، وأدوات الهندسة كاملة.</div>
+            <div class="label">الأدوات اللازمة للامتحان</div>
+            <div class="value">إحضار جميع الأدوات اللازمة لأداء الامتحان: الأقلام (أزرق، أسود، رصاص)، المسطرة، الممحاة، الآلة الحاسبة المسموح بها، أدوات الهندسة، وأي أدوات خاصة بالمادة</div>
           </div>
         </div>
         
@@ -2208,31 +1820,39 @@
           <i class="fas fa-mobile-alt"></i>
           <div>
             <div class="label">الأجهزة الإلكترونية الممنوعة</div>
-            <div class="value">يمنع منعاً باتاً إدخال الهواتف المحمولة، الساعات الذكية، السماعات، الكاميرات، أو أي أجهزة إلكترونية قد تساعد في الغش أو تشتيت الانتباه.</div>
+            <div class="value">يمنع منعًا باتًا إدخال الهواتف النقالة، الأجهزة الذكية، الساعات الإلكترونية، السماعات، أدوات التصوير، أجهزة التسجيل، أو أي أدوات إلكترونية غير مصرح بها داخل القاعة</div>
           </div>
         </div>
         
         <div class="info-row">
-          <i class="fas fa-id-card-alt"></i>
+          <i class="fas fa-ban"></i>
           <div>
-            <div class="label">البطاقة الشخصية والإثبات</div>
-            <div class="value">ضرورة إحضار البطاقة الشخصية أو البطاقة المدرسية كإثبات للهوية. سيتم منع أي طالبة لا تحمل إثباتاً للهوية من دخول القاعة.</div>
+            <div class="label">الأدوات الحادة والممنوعة</div>
+            <div class="value">يحظر إدخال الأسلحة، الأدوات الحادة، المواد الخطرة، أو أي أدوات قد تشكل خطراً على السلامة العامة داخل المركز الامتحاني. سيتم مصادرة أي أدوات ممنوعة</div>
+          </div>
+        </div>
+        
+        <div class="info-row">
+          <i class="fas fa-id-card"></i>
+          <div>
+            <div class="label">بطاقة الهوية الرسمية</div>
+            <div class="value">على كل طالبة إحضار بطاقة الهوية الشخصية أو جواز السفر أو رخصة القيادة أو البطاقة المدرسية كإثبات للهوية. بدون هوية لا يسمح بدخول القاعة</div>
           </div>
         </div>
         
         <div class="info-row">
           <i class="fas fa-clock"></i>
           <div>
-            <div class="label">مواعيد الحضور والالتزام</div>
-            <div class="value">الحضور قبل 45 دقيقة من بدء الامتحان، والتواجد في القاعة قبل 15 دقيقة. التأخير لأكثر من 15 دقيقة يعني الحرمان من دخول القاعة.</div>
+            <div class="label">مواعيد الحضور والانصراف</div>
+            <div class="value">الحضور قبل نصف ساعة على الأقل من بدء الامتحان، والتواجد في القاعة قبل 10 دقائق من البدء. لا يسمح بالمغادرة قبل انقضاء ثلاثة أرباع زمن الاختبار إلا في حالات الضرورة القصوى</div>
           </div>
         </div>
         
         <div class="info-row">
-          <i class="fas fa-door-closed"></i>
+          <i class="fas fa-door-open"></i>
           <div>
             <div class="label">قواعد الدخول والخروج</div>
-            <div class="value">عدم السماح بمغادرة القاعة قبل انقضاء نصف زمن الاختبار. في حالات الضرورة القصوى، ستقوم الملاحظة بإجراء اللازم.</div>
+            <div class="value">لا يسمح بالدخول إلى القاعة بعد مرور 15 دقيقة من بدء الوقت إلا بإذن من رئيس المركز. في حال التأخير، يحرم الطالب من دخول القاعة إلا بتقرير طبي معتمد</div>
           </div>
         </div>
         
@@ -2240,43 +1860,33 @@
           <i class="fas fa-calculator"></i>
           <div>
             <div class="label">الآلات الحاسبة المسموحة</div>
-            <div class="value">يسمح فقط بالآلات الحاسبة العلمية العادية غير القابلة للبرمجة. يمنع استخدام الآلات الرسومية أو المبرمجة أو التي تحتوي على ذاكرة.</div>
+            <div class="value">يسمح بالآلات الحاسبة العلمية العادية فقط، التي لا تكون قابلة للبرمجة والتخزين. يمنع استخدام الآلات الحاسبة الرسومية أو المبرمجة أو التي تحتوي على ذاكرة تخزين</div>
           </div>
         </div>
         
         <div class="info-row">
-          <i class="fas fa-edit"></i>
+          <i class="fas fa-pen"></i>
           <div>
-            <div class="label">طريقة الكتابة والإجابة</div>
-            <div class="value">استخدام القلم الأزرق أو الأسود للإجابات الأساسية، وقلم الرصاص للرسومات والمسائل. يمنع استخدام أقلام التصحيح على كراسة الإجابة.</div>
+            <div class="label">أدوات الكتابة والتصحيح</div>
+            <div class="value">استخدام الأقلام الجافة الزرقاء أو السوداء للإجابة، ويفضل استخدام قلم رصاص في الأسئلة الموضوعية. يمنع استخدام أقلام التصحيح (الوايت) على كراسة الإجابة نهائياً</div>
           </div>
         </div>
         
         <div class="info-row">
-          <i class="fas fa-volume-mute"></i>
+          <i class="fas fa-user-clock"></i>
           <div>
-            <div class="label">الهدوء والانضباط</div>
-            <div class="value">الالتزام بالهدوء التام داخل القاعة، عدم التحدث أو التواصل مع الآخرين، ورفع اليد بهدوء في حالة الحاجة لاستدعاء الملاحظة.</div>
-          </div>
-        </div>
-        
-        <div class="info-row">
-          <i class="fas fa-hand-sparkles"></i>
-          <div>
-            <div class="label">النظافة والنظام</div>
-            <div class="value">المحافظة على نظافة القاعة، عدم الكتابة على الطاولات، وترك المكان كما كان عند المغادرة. النظام دليل على التربية والانضباط.</div>
+            <div class="label">التعليمات أثناء الامتحان</div>
+            <div class="value">الالتزام بالهدوء التام، عدم التحدث مع الآخرين، رفع اليد لاستدعاء الملاحظ في حالة الحاجة للمساعدة، اتباع تعليمات المراقبات بدقة، وعدم القيام بأي تصرف يعكر صفو الامتحان</div>
           </div>
         </div>
       </div>
       
-      <div style="margin-top:35px;padding:25px;background:linear-gradient(135deg, rgba(255, 213, 79, 0.2), rgba(206, 147, 216, 0.15));border-radius:25px;border:3px solid rgba(255, 213, 79, 0.4);position:relative;overflow:hidden;">
-        <div style="position:absolute;top:10px;right:10px;font-size:2.5rem;color:rgba(156, 39, 176, 0.2);">✨</div>
-        <div style="position:absolute;bottom:10px;left:10px;font-size:2.5rem;color:rgba(214, 51, 132, 0.2);">🌸</div>
-        <p style="text-align:center;font-weight:900;color:var(--text-color);margin:0;font-size:1.3rem;line-height:1.8;">
-          <i class="fas fa-heart" style="color:var(--accent-color);margin-left:10px;"></i>
-          نتمنى لطالباتنا المتميزات في مدرسة خولة بنت حكيم دوام التوفيق والنجاح الباهر، 
-          ونسأل الله العلي القدير أن يوفقكن وييسر أموركن، وأن تحققن أسمى آمالكن وطموحاتكن
-          <i class="fas fa-heart" style="color:var(--accent-color);margin-right:10px;"></i>
+      <div style="margin-top:30px;padding:25px;background:linear-gradient(135deg, rgba(230, 180, 34, 0.18), rgba(44, 90, 160, 0.12));border-radius:22px;border:3px solid rgba(230, 180, 34, 0.35);">
+        <p style="text-align:center;font-weight:900;color:var(--dark-blue);margin:0;font-size:1.3rem;line-height:1.7;">
+          <i class="fas fa-graduation-cap" style="color:var(--gold-color);margin-left:15px;font-size:1.6rem;"></i>
+          باسم أسرة مدرسة خولة بنت حكيم للتعليم الأساسي، نتمنى لجميع طالباتنا التوفيق والنجاح الباهر في امتحاناتهم، 
+          ونسأل الله العلي القدير أن يوفق الجميع لما فيه الخير والفلاح والنجاح، وأن يحقق لكل طالبة أعلى الدرجات والتميز
+          <i class="fas fa-graduation-cap" style="color:var(--gold-color);margin-right:15px;font-size:1.6rem;"></i>
         </p>
       </div>
     </div>
@@ -2286,83 +1896,86 @@
   <div id="optionsModal" class="modal" role="dialog" aria-modal="true">
     <div class="modal-content">
       <span class="close" aria-label="إغلاق">&times;</span>
-      <h2 style="text-align:center;color:var(--text-color);font-weight:900;margin:20px 0 35px;font-size:2.5rem;position:relative;">
-        <i class="fas fa-cog" style="color:var(--primary-color);margin-left:15px;animation:spin 4s linear infinite;"></i>
-        الخيارات والإعدادات
-        <i class="fas fa-star" style="color:var(--gold);margin-right:15px;"></i>
-      </h2>
+      <h2 style="text-align:center;color:var(--dark-blue);font-weight:900;margin:20px 0 30px;font-size:2.5rem;border-bottom:4px solid var(--primary-green);padding-bottom:20px;">الخيارات والإعدادات</h2>
 
-      <div style="display:grid;gap:25px;padding:0 15px;margin-bottom:35px;">
-        <button class="nav-btn instructions-btn" onclick="openDailyForBest()" style="width:100%;padding:25px;font-size:1.3rem;border-radius:25px;">
+      <div style="display:grid;gap:22px;padding:0 15px;max-width:600px;margin:0 auto;">
+        <button class="nav-btn instructions-btn shine-effect" onclick="openDailyForBest()" style="width:100%;padding:25px;font-size:1.3rem;">
           <i class="fas fa-calendar-day"></i>فتح شاشة اليوم الامتحاني
         </button>
-        <button class="nav-btn dropdown-btn" onclick="window.print()" style="width:100%;padding:25px;font-size:1.3rem;border-radius:25px;">
+        <button class="nav-btn dropdown-btn shine-effect" onclick="window.print()" style="width:100%;padding:25px;font-size:1.3rem;">
           <i class="fas fa-print"></i>طباعة جدول الامتحانات
         </button>
-        <button class="nav-btn" style="width:100%;padding:25px;font-size:1.3rem;background:var(--gradient-accent);border-radius:25px;" onclick="closeModal(optionsModal)">
-          <i class="fas fa-times-circle"></i>إغلاق النافذة
+        <button class="nav-btn shine-effect" style="width:100%;padding:25px;font-size:1.3rem;background:linear-gradient(135deg, #e6b422 0%, #d4a017 100%);" onclick="closeModal(optionsModal)">
+          <i class="fas fa-times"></i>إغلاق النافذة
         </button>
       </div>
       
-      <div style="padding:25px;background:linear-gradient(135deg, rgba(214, 51, 132, 0.1) 0%, rgba(156, 39, 176, 0.1) 100%);border-radius:25px;border:2px solid rgba(214, 51, 132, 0.2);">
-        <h3 style="color:var(--primary-color);margin-bottom:20px;font-size:1.5rem;">
-          <i class="fas fa-info-circle" style="color:var(--lavender);margin-left:10px;"></i>
-          معلومات سريعة عن المدرسة
-        </h3>
-        <div style="display:grid;gap:15px;">
-          <div style="display:flex;align-items:center;gap:15px;padding:15px;background:rgba(255,255,255,0.8);border-radius:15px;">
-            <i class="fas fa-school" style="color:var(--secondary-color);font-size:1.5rem;"></i>
-            <span style="font-weight:600;color:var(--text-color);">المدرسة: خولة بنت حكيم للتعليم الأساسي للبنات</span>
+      <div style="margin-top:40px;padding:25px;background:rgba(26, 127, 92, 0.08);border-radius:22px;border:2px solid rgba(26, 127, 92, 0.15);max-width:800px;margin-left:auto;margin-right:auto;">
+        <h3 style="color:var(--primary-green);margin-bottom:20px;font-size:1.5rem;text-align:center;"><i class="fas fa-info-circle"></i> معلومات سريعة عن النظام</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:20px;">
+          <div style="display:flex;align-items:center;gap:15px;padding:15px;background:white;border-radius:16px;box-shadow:0 8px 25px rgba(0,0,0,0.08);">
+            <i class="fas fa-school" style="color:var(--secondary-green);font-size:1.8rem;"></i>
+            <div>
+              <div style="font-weight:800;color:var(--dark-blue);">المدرسة</div>
+              <div>خولة بنت حكيم للتعليم الأساسي</div>
+            </div>
           </div>
-          <div style="display:flex;align-items:center;gap:15px;padding:15px;background:rgba(255,255,255,0.8);border-radius:15px;">
-            <i class="fas fa-user-graduate" style="color:var(--gold);font-size:1.5rem;"></i>
-            <span style="font-weight:600;color:var(--text-color);">الصفوف: من الصف التاسع إلى الصف الثاني عشر</span>
+          <div style="display:flex;align-items:center;gap:15px;padding:15px;background:white;border-radius:16px;box-shadow:0 8px 25px rgba(0,0,0,0.08);">
+            <i class="fas fa-user-graduate" style="color:var(--gold-color);font-size:1.8rem;"></i>
+            <div>
+              <div style="font-weight:800;color:var(--dark-blue);">الصفوف</div>
+              <div>من التاسع إلى الثاني عشر</div>
+            </div>
           </div>
-          <div style="display:flex;align-items:center;gap:15px;padding:15px;background:rgba(255,255,255,0.8);border-radius:15px;">
-            <i class="fas fa-calendar-alt" style="color:var(--accent-color);font-size:1.5rem;"></i>
-            <span style="font-weight:600;color:var(--text-color);">الفصل الدراسي: الأول - الدور الأول 2025/2026</span>
+          <div style="display:flex;align-items:center;gap:15px;padding:15px;background:white;border-radius:16px;box-shadow:0 8px 25px rgba(0,0,0,0.08);">
+            <i class="fas fa-calendar-alt" style="color:var(--accent-blue);font-size:1.8rem;"></i>
+            <div>
+              <div style="font-weight:800;color:var(--dark-blue);">الفصل الدراسي</div>
+              <div>الأول - الدور الأول</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ✅ شاشة اليوم الامتحاني -->
+  <!-- ✅ شاشة بيانات الاختبار اليومية - كاملة الشاشة -->
   <div id="dailyExamModal" class="modal daily-fullscreen" role="dialog" aria-modal="true">
     <div class="modal-content">
-      <div class="close-daily-top" onclick="closeModal(dailyExamModal)" aria-label="إغلاق الشاشة">
+      <div class="close-daily-top shine-effect" onclick="closeModal(dailyExamModal)" aria-label="إغلاق الشاشة">
         <i class="fas fa-times"></i>
       </div>
       
       <div class="daily-header">
         <div class="daily-header-content">
-          <div class="daily-main-title">🌸 امتحان دبلوم التعليم العام للبنات 🌸</div>
-          <div class="daily-sub-title">مدرسة خولة بنت حكيم للتعليم الأساسي</div>
+          <div class="daily-main-title">امتحان دبلوم التعليم العام</div>
+          <div class="daily-sub-title">سلطنة عُمان - وزارة التربية والتعليم</div>
+          <div class="daily-sub-title">المديرية العامة للتربية والتعليم بمحافظة ظفار</div>
           <div class="header-divider"></div>
-          <div class="daily-year-info">الصفوف (9-12) - العام الدراسي 2025/2026م</div>
+          <div class="daily-year-info">مدرسة خولة بنت حكيم للتعليم الأساسي - الصفوف (9-12) - العام الدراسي 2025/2026م</div>
         </div>
       </div>
 
       <div class="daily-body">
         <!-- حالة اليوم واليوم -->
         <div class="exam-status-container">
-          <div class="exam-day-display" id="dailyExamDay">
+          <div class="exam-day-display shine-effect" id="dailyExamDay">
             <i class="fas fa-calendar-alt"></i>
             <span id="dailyDayText">--</span>
           </div>
-          <div class="exam-status-badge upcoming" id="dailyExamStatus">
+          <div class="exam-status-badge upcoming shine-effect" id="dailyExamStatus">
             <i class="fas fa-circle" id="dailyStatusIcon"></i>
             <span id="dailyStatusText">--</span>
           </div>
         </div>
 
-        <!-- بيانات الامتحان مع العد التنازلي -->
+        <!-- ✅ بيانات الامتحان مع العد التنازلي المدمج -->
         <div class="exam-data-container">
           <div class="exam-subject" id="dailyExamSubject">--</div>
           
           <div class="exam-details-grid">
             <!-- اليوم والتاريخ -->
-            <div class="exam-detail-item">
+            <div class="exam-detail-item shine-effect">
               <div class="detail-label">
                 <i class="fas fa-calendar-day"></i>
                 اليوم والتاريخ
@@ -2371,7 +1984,7 @@
             </div>
             
             <!-- وقت الإجابة -->
-            <div class="exam-detail-item">
+            <div class="exam-detail-item shine-effect">
               <div class="detail-label">
                 <i class="fas fa-clock"></i>
                 وقت الإجابة
@@ -2380,7 +1993,7 @@
             </div>
             
             <!-- زمن الإجابة -->
-            <div class="exam-detail-item">
+            <div class="exam-detail-item shine-effect">
               <div class="detail-label">
                 <i class="fas fa-stopwatch"></i>
                 زمن الإجابة
@@ -2388,13 +2001,13 @@
               <div class="detail-value" id="dailyExamDuration">--</div>
             </div>
             
-            <!-- العد التنازلي -->
+            <!-- ✅ العد التنازلي كجزء من بيانات الامتحان -->
             <div class="countdown-container">
               <div class="countdown-title">
                 <i class="fas fa-hourglass-half"></i>
                 <span>العد التنازلي للامتحان</span>
               </div>
-              <div class="countdown-display upcoming" id="dailyCountdownDisplay">--</div>
+              <div class="countdown-display upcoming shine-effect" id="dailyCountdownDisplay">--</div>
               <div class="countdown-hint" id="dailyCountdownHint">--</div>
             </div>
           </div>
@@ -2413,7 +2026,7 @@
 
     const closeEls = document.getElementsByClassName("close");
 
-    // عناصر شاشة اليوم
+    // عناصر شاشة اليوم الجديدة
     const dailyDayText = document.getElementById("dailyDayText");
     const dailyDayDate = document.getElementById("dailyDayDate");
     const dailyExamSubject = document.getElementById("dailyExamSubject");
@@ -2433,56 +2046,29 @@
       { id: 4, day: "الاثنين", date: "5/1/2026", subject: "التاريخ (العالم من حولي)", time: "8:00 صباحًا - 11:00 صباحًا", start: new Date(2026, 0, 5, 8, 0, 0), end: new Date(2026, 0, 5, 11, 0, 0), duration: "3 ساعات" },
       { id: 5, day: "الثلاثاء", date: "6/1/2026", subject: "الكيمياء", time: "8:00 صباحًا - 11:00 صباحًا", start: new Date(2026, 0, 6, 8, 0, 0), end: new Date(2026, 0, 6, 11, 0, 0), duration: "3 ساعات" },
       { id: 6, day: "الأربعاء", date: "7/1/2026", subject: "الجغرافيا والتقنيات الحديثة", time: "8:00 صباحًا - 11:00 صباحًا", start: new Date(2026, 0, 7, 8, 0, 0), end: new Date(2026, 0, 7, 11, 0, 0), duration: "3 ساعات" },
-      { id: 7, day: "الخميس", date: "8/1/2026", subject: "الأحياء", time: "8:00 صbاحًا - 11:00 صباحًا", start: new Date(2026, 0, 8, 8, 0, 0), end: new Date(2026, 0, 8, 11, 0, 0), duration: "3 ساعات" },
+      { id: 7, day: "الخميس", date: "8/1/2026", subject: "الأحياء", time: "8:00 صباحًا - 11:00 صباحًا", start: new Date(2026, 0, 8, 8, 0, 0), end: new Date(2026, 0, 8, 11, 0, 0), duration: "3 ساعات" },
       { id: 8, day: "الأحد", date: "11/1/2026", subject: "الفيزياء", time: "8:00 صباحًا - 11:00 صباحًا", start: new Date(2026, 0, 11, 8, 0, 0), end: new Date(2026, 0, 11, 11, 0, 0), duration: "3 ساعات" },
       { id: 9, day: "الإثنين", date: "12/1/2026", subject: "العلوم والبيئة", time: "8:00 صباحًا - 11:00 صباحًا", start: new Date(2026, 0, 12, 8, 0, 0), end: new Date(2026, 0, 12, 11, 0, 0), duration: "3 ساعات" },
       { id: 10, day: "الثلاثاء", date: "13/1/2026", subject: "اللغة الإنجليزية", time: "8:00 صباحًا - 11:00 صباحًا", start: new Date(2026, 0, 13, 8, 0, 0), end: new Date(2026, 0, 13, 11, 0, 0), duration: "3 ساعات" },
       { id: 11, day: "الأربعاء", date: "14/1/2026", subject: "الدراسات الاجتماعية (هذا وطني)", time: "8:00 صباحًا - 11:00 صباحًا", start: new Date(2026, 0, 14, 8, 0, 0), end: new Date(2026, 0, 14, 11, 0, 0), duration: "3 ساعات" },
     ];
 
-    // إنشاء النجوم المتحركة
-    function createStars() {
-      const starsContainer = document.getElementById('stars');
-      const starsCount = 100;
-      
-      for (let i = 0; i < starsCount; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${Math.random() * 3}s`;
-        star.style.animationDuration = `${1 + Math.random() * 4}s`;
-        starsContainer.appendChild(star);
-      }
-    }
-
-    // إنشاء الزهور المتحركة
-    function createFloatingFlowers() {
-      const flowersContainer = document.getElementById('floatingFlowers');
-      const flowers = ['🌸', '💮', '🏵️', '🌺', '🌻', '🌼', '🌷', '🥀', '🪷', '🌹'];
-      const flowerCount = 15;
-      
-      for (let i = 0; i < flowerCount; i++) {
-        const flower = document.createElement('div');
-        flower.className = 'flower';
-        flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
-        flower.style.left = `${Math.random() * 100}%`;
-        flower.style.animationDelay = `${Math.random() * 15}s`;
-        flower.style.fontSize = `${1 + Math.random() * 2}rem`;
-        flowersContainer.appendChild(flower);
-      }
-    }
-
     function openModal(modal) {
       modal.style.display = "block";
       document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
+      // لمنع التمرير خلف المودال
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
     }
     
     function closeModal(modal) {
       modal.style.display = "none";
       document.body.style.overflow = "auto";
       document.documentElement.style.overflow = "auto";
+      document.body.style.position = '';
+      document.body.style.width = '';
+      
       if (modal === dailyExamModal && window.__dailyInt) {
         clearInterval(window.__dailyInt);
       }
@@ -2689,10 +2275,6 @@
     }
 
     function init() {
-      // إنشاء العناصر المتحركة
-      createStars();
-      createFloatingFlowers();
-      
       updateDateTime();
       updateCountdowns();
       setInterval(updateDateTime, 1000);
@@ -2705,7 +2287,7 @@
       const now = new Date();
       const activeExam = exams.find(ex => now >= ex.start && now <= ex.end);
       if (activeExam) {
-        setTimeout(() => openDaily(activeExam), 1500);
+        setTimeout(() => openDaily(activeExam), 1000);
       }
     }
 
